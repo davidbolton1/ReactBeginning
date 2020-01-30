@@ -1,17 +1,19 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
-// // If you want your app to work offline and load faster, you can change
-// // unregister() to register() below. Note this comes with some pitfalls.
-// // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
 
 
+
+/*
 function greet ({
     name,
     address,
@@ -79,10 +81,14 @@ function addressIsNotPacific(person) {
 const noPacifics = persons.filter((person) => {
     return person.address !== 'Pacific';
 });
-*/
 
-const noPacifics = persons.filter(person => person.address !== 'Pacific')
+//const noPacifics = persons.filter(person => person.address !== 'Pacific')
+
+//const noPacifics = persons.filter(({address}) => address !== 'Pacific')
+
 //console.log(addressIsNotPacific(persons[2]))
 //const noPacifics = persons.filter(addressIsNotPacific);
-console.log(noPacifics)
+//console.log(noPacifics)
 console.log(persons.map(greet))
+console.log(persons.filter(({address}) => address !== 'Pacific').map(greet))
+*/
