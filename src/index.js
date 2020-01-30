@@ -13,17 +13,38 @@
 console.log('A test')
 console.log('Another test')
 
-function greet ({name}) {
-    
-
-    return `Hello, ${name}`;
+function greet ({
+    name,
+    address,
+    //occupation
+}) 
+{
+    return `Hello, ${name}, You live at ${address}, Yer a ${person.occupation}`;
 }
 
 const person = {
     name: 'YesHA',
+    address: 'YEEEEA',
+    occupation: 'Wizard'
     
 };
-console.log(greet(person))
+
+// function fromEarth({
+//     name,
+//     occupation
+// }) {
+    
+
+const fromEarth = (somebody) => {
+    const modifiedSomebody = {
+        ...somebody,
+        address:'Earth'
+    }
+    return modifiedSomebody;
+    
+}
+console.log(greet(fromEarth(person)))
+//console.log(greet(person))
 
 const greet2 = () => {
     console.log('Ah')
