@@ -35,10 +35,17 @@ const person = {
 // }) {
     
 
-const fromEarth = (somebody) => {
+const fromEarth = (originalObject) => {
+    // if (originalObject.address)
+    // return originalObject
+    // else {
+
+    //const theAddress = originalObject.address || 'Earth';
     const modifiedSomebody = {
-        ...somebody,
-        address:'Earth'
+        address: 'Earth',
+        ...originalObject,
+        //address: theAddress,
+        age: '1000000000000000'
     }
     return modifiedSomebody;
     
@@ -49,4 +56,4 @@ console.log(greet(fromEarth(person)))
 const greet2 = () => {
     console.log('Ah')
 }
-greet2()
+//greet2()
