@@ -10,8 +10,7 @@
 // // unregister() to register() below. Note this comes with some pitfalls.
 // // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
-console.log('A test')
-console.log('Another test')
+
 
 function greet ({
     name,
@@ -22,6 +21,7 @@ function greet ({
     return `Hello, ${name}, You live at ${address}, Yer a ${person.occupation}`;
 }
 
+//Opt CMd Down arrow
 const person = {
     name: 'YesHA',
     address: 'YEEEEA',
@@ -50,10 +50,39 @@ const fromEarth = (originalObject) => {
     return modifiedSomebody;
     
 }
-console.log(greet(fromEarth(person)))
+//console.log(greet(fromEarth(person)))
 //console.log(greet(person))
 
 const greet2 = () => {
     console.log('Ah')
 }
 //greet2()
+
+
+const persons = [
+
+    {name: 'ALSDFA', address: 'Pacific'},
+    {name: 'HOSE', address: 'Notasdf'},
+    {name: 'Pota', address: 'YesIndeeed'} 
+];
+const modifiedPersons = [
+    'Shonea',
+    ...persons,
+    
+]
+
+/*
+function addressIsNotPacific(person) {
+    return person.address !== 'Pacific';
+}
+
+const noPacifics = persons.filter((person) => {
+    return person.address !== 'Pacific';
+});
+*/
+
+const noPacifics = persons.filter(person => person.address !== 'Pacific')
+//console.log(addressIsNotPacific(persons[2]))
+//const noPacifics = persons.filter(addressIsNotPacific);
+console.log(noPacifics)
+console.log(persons.map(greet))
